@@ -1,0 +1,199 @@
+---
+import Mainlayout from '../layouts/Mainlayout.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<Mainlayout title="Inicio - Un colegio para todos y todas">
+
+  <!-- Sección de Presentación Principal -->
+  <section class="hero-section" aria-labelledby="hero-title">
+    <h1 id="hero-title">Un colegio para todos y todas</h1>
+    <p class="subtitle">Inclusión educativa y accesibilidad</p>
+    <p class="hero-description">
+      La inclusión educativa busca garantizar que todos los estudiantes tengan las mismas oportunidades de aprender, participar y desarrollarse, independientemente de sus capacidades, características personales, origen o situación social. Un colegio inclusivo reconoce y respeta las diferencias individuales, proporcionando los apoyos necesarios para que ningún estudiante quede excluido del proceso educativo.
+    </p>
+    
+    <!-- Botones de Conexión entre Páginas -->
+    <div class="hero-buttons">
+      <Button text="Más Información" href="/info" ariaLabel="Ir a la página de información detallada" />
+      <Button text="Barreras Educativas" href="/barreras" ariaLabel="Ir a la página de barreras educativas" />
+      <Button text="Propuestas Inclusivas" href="/propuestas" ariaLabel="Ir a la página de propuestas inclusivas" />
+    </div>
+  </section>
+
+  <!-- Sección de Objetivos Clave con Componentes Card -->
+  <section class="objectives-section" aria-labelledby="objectives-title">
+    <h2 id="objectives-title">Nuestros Objetivos Educativos</h2>
+    <div class="grid">
+      <Card 
+        title="Igualdad de Oportunidades" 
+        description="Promover la igualdad de oportunidades para que cada estudiante despliegue su máximo potencial en el aula." 
+      />
+      <Card 
+        title="Respeto a las Diferencias" 
+        description="Reconocer y valorar la diversidad de capacidades, antecedentes y características personales de todos los alumnos." 
+      />
+      <Card 
+        title="Educación Accesible" 
+        description="Garantizar que los contenidos, espacios físicos y métodos de enseñanza sean accesibles sin barreras." 
+      />
+    </div>
+  </section>
+
+  <!-- Compromisos con la Comunidad Educativa -->
+  <section class="additional-goals" aria-labelledby="goals-title">
+    <h2 id="goals-title">Compromisos con la Comunidad Educativa</h2>
+    <ul class="goals-list">
+      <li><strong>Participación activa:</strong> Fomentar la participación plena de todos los estudiantes en actividades académicas y extracurriculares.</li>
+      <li><strong>Entornos seguros:</strong> Crear ambientes educativos seguros, acogedores e inclusivos libres de discriminación.</li>
+    </ul>
+
+    <div class="action-footer">
+      <p>¿Quieres conocer las soluciones que proponemos para lograr esto?</p>
+      <a href="/propuestas" class="direct-link">Explorar Propuestas Inclusivas &rarr;</a>
+    </div>
+  </section>
+
+</Mainlayout>
+
+<style>
+  /* Héroe con estilo Hermético y Colores Vibrantes */
+  .hero-section {
+    background-color: #0f172a;
+    border: 3px solid #38bdf8;
+    border-radius: 12px;
+    margin-top: 32px;
+    padding: 40px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
+  }
+
+  .hero-section h1 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 42px;
+    font-weight: 800;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+    color: #f1f5f9;
+    max-width: 850px;
+    margin: 0 auto 28px auto;
+    line-height: 26px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* Secciones principales */
+  .objectives-section, .additional-goals {
+    margin-top: 40px;
+  }
+
+  .objectives-section h2, .additional-goals h2 {
+    font-size: 26px;
+    color: #1e1b4b;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #6366f1;
+    padding-bottom: 8px;
+    font-weight: 800;
+  }
+
+  .additional-goals {
+    background-color: #ffffff;
+    border: 3px solid #1e293b;
+    border-radius: 10px;
+    padding: 32px 28px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .goals-list {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .goals-list li {
+    font-size: 16px;
+    color: #0f172a;
+    margin-bottom: 14px;
+    line-height: 24px;
+    padding: 12px 16px;
+    background-color: #f8fafc;
+    border-left: 4px solid #6366f1;
+    border-radius: 4px;
+  }
+
+  .goals-list strong {
+    color: #312e81;
+  }
+
+  .action-footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 2px dashed #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .action-footer p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .direct-link {
+    color: #4338ca;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .direct-link:hover, .direct-link:focus {
+    color: #1e1b4b;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .hero-section {
+      padding: 28px 16px;
+    }
+
+    .hero-section h1 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+    }
+
+    .additional-goals {
+      padding: 20px 16px;
+    }
+
+    .action-footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

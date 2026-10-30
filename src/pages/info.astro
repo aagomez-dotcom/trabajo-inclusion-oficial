@@ -1,0 +1,278 @@
+---
+import Mainlayout from '../layouts/Mainlayout.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<Mainlayout title="Información - Un colegio para todos y todas">
+
+  <!-- Héroe / Banner Principal -->
+  <section class="hero-section" aria-labelledby="hero-title">
+    <h1 id="hero-title">Un colegio para todos y todas</h1>
+    <p class="subtitle">Inclusión educativa y accesibilidad</p>
+    <p class="description">
+      Sitio informativo sobre inclusión educativa, diversidad y eliminación de barreras para el aprendizaje.
+    </p>
+    <div class="nav-links-banner">
+      <Button text="Ir al Inicio" href="/" ariaLabel="Ir a la página de inicio" />
+      <Button text="Ver Barreras" href="/barreras" ariaLabel="Ir a la página de barreras educativas" />
+      <Button text="Ver Propuestas" href="/propuestas" ariaLabel="Ir a la página de propuestas inclusivas" />
+    </div>
+  </section>
+
+  <!-- Sección 1: Inicio -->
+  <section class="info-block" aria-labelledby="inicio-title">
+    <h2 id="inicio-title">1. Inicio: ¿Qué es la inclusión educativa?</h2>
+    <p class="block-text">
+      La inclusión educativa busca garantizar que todos los estudiantes tengan las mismas oportunidades de aprender, participar y desarrollarse, independientemente de sus capacidades, características personales, origen o situación social.
+    </p>
+    <p class="block-text">
+      Un colegio inclusivo reconoce y respeta las diferencias individuales, proporcionando los apoyos necesarios para que ningún estudiante quede excluido del proceso educativo.
+    </p>
+
+    <h3 class="subheading">Objetivos clave:</h3>
+    <div class="grid">
+      <Card 
+        title="Igualdad de Oportunidades" 
+        description="Promover la igualdad de oportunidades para que cada estudiante logre su desarrollo integral." 
+      />
+      <Card 
+        title="Respeto e Inclusión" 
+        description="Respetar las diferencias individuales y garantizar una educación totalmente accesible para todos." 
+      />
+      <Card 
+        title="Participación y Seguridad" 
+        description="Fomentar la participación activa y crear ambientes educativos seguros e inclusivos." 
+      />
+    </div>
+  </section>
+
+  <!-- Sección 2: Barreras educativas -->
+  <section class="info-block" aria-labelledby="barreras-title">
+    <h2 id="barreras-title">2. Barreras educativas: ¿Qué son?</h2>
+    <p class="block-text">
+      Son obstáculos que dificultan el acceso, la participación y el aprendizaje de los estudiantes dentro de un establecimiento educacional.
+    </p>
+
+    <h3 class="subheading">Tipos de barreras:</h3>
+    <ul class="barriers-list">
+      <li><strong>Físicas:</strong> Falta de rampas, ascensores, baños adaptados o espacios accesibles.</li>
+      <li><strong>Comunicativas:</strong> Ausencia de subtítulos, lengua de señas o materiales en Braille.</li>
+      <li><strong>De aprendizaje:</strong> Falta de adaptación de actividades y utilización de una única metodología de enseñanza.</li>
+      <li><strong>Sociales:</strong> Discriminación, prejuicios, burlas y exclusión entre compañeros.</li>
+    </ul>
+
+    <div class="section-link">
+      <a href="/barreras" class="text-link">Conoce en detalle todas las Barreras Educativas &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Sección 3: Propuestas inclusivas -->
+  <section class="info-block" aria-labelledby="propuestas-title">
+    <h2 id="propuestas-title">3. Propuestas inclusivas: ¿Cómo construir un colegio inclusivo?</h2>
+    <div class="proposals-container">
+      <ul class="proposals-list">
+        <li>Construir rampas y mejorar los accesos del establecimiento.</li>
+        <li>Incorporar materiales educativos adaptados.</li>
+        <li>Utilizar diferentes estrategias de enseñanza.</li>
+        <li>Promover campañas contra la discriminación.</li>
+        <li>Capacitar a docentes sobre educación inclusiva.</li>
+        <li>Fomentar el respeto, la empatía y la solidaridad.</li>
+      </ul>
+    </div>
+
+    <div class="section-link">
+      <a href="/propuestas" class="text-link">Explora todas nuestras Propuestas Inclusivas &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Mensaje Final / Cierre Destacado -->
+  <section class="final-message-box" aria-labelledby="message-title">
+    <h2 id="message-title">Mensaje Final</h2>
+    <p>
+      Todos tenemos derecho a aprender, participar y sentirnos parte de nuestra comunidad educativa. La inclusión comienza cuando reconocemos que nuestras diferencias nos hacen únicos.
+    </p>
+    <div class="action-container">
+      <Button text="Inicio" href="/" ariaLabel="Volver al inicio" />
+      <Button text="Barreras Educativas" href="/barreras" ariaLabel="Ir a la página de barreras educativas" />
+      <Button text="Propuestas Inclusivas" href="/propuestas" ariaLabel="Ir a la página de propuestas inclusivas" />
+    </div>
+  </section>
+
+</Mainlayout>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    background-color: #0f172a;
+    border: 3px solid #38bdf8;
+    border-radius: 12px;
+    margin-top: 32px;
+    padding: 40px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
+  }
+
+  .hero-section h1 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 42px;
+    font-weight: 800;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .description {
+    font-size: 17px;
+    color: #f1f5f9;
+    max-width: 800px;
+    margin: 0 auto 24px auto;
+    line-height: 26px;
+  }
+
+  .nav-links-banner {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  /* Bloques de Información Herméticos */
+  .info-block {
+    margin-top: 36px;
+    background-color: #ffffff;
+    border: 3px solid #1e293b;
+    border-radius: 10px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .info-block h2 {
+    font-size: 24px;
+    color: #1e1b4b;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #6366f1;
+    padding-bottom: 10px;
+    font-weight: 800;
+  }
+
+  .subheading {
+    font-size: 19px;
+    color: #4338ca;
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+
+  .block-text {
+    font-size: 16px;
+    color: #0f172a;
+    line-height: 26px;
+    margin-bottom: 14px;
+  }
+
+  /* Listas estructuradas */
+  .barriers-list, .proposals-list {
+    padding-left: 20px;
+    list-style-type: none;
+  }
+
+  .barriers-list li, .proposals-list li {
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 14px;
+    background-color: #f8fafc;
+    border-left: 4px solid #6366f1;
+    border-radius: 4px;
+  }
+
+  .barriers-list strong {
+    color: #312e81;
+  }
+
+  /* Enlaces de sección */
+  .section-link {
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  .text-link {
+    color: #4338ca;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .text-link:hover, .text-link:focus {
+    color: #1e1b4b;
+    text-decoration: underline;
+  }
+
+  /* Cierre y CTA */
+  .final-message-box {
+    background-color: #1e1b4b;
+    border: 3px solid #fbbf24;
+    border-radius: 12px;
+    padding: 36px 24px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .final-message-box h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 14px;
+    font-weight: 800;
+  }
+
+  .final-message-box p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fef08a;
+    max-width: 800px;
+    margin: 0 auto 28px auto;
+    line-height: 28px;
+  }
+
+  .action-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
+    .hero-section {
+      padding: 28px 16px;
+    }
+
+    .hero-section h1 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+    }
+
+    .info-block {
+      padding: 22px 16px;
+    }
+
+    .section-link {
+      text-align: center;
+    }
+  }
+</style>

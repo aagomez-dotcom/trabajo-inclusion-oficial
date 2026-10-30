@@ -1,0 +1,248 @@
+---
+import Mainlayout from '../layouts/Mainlayout.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<Mainlayout title="Barreras Educativas - Un colegio para todos y todas">
+  <!-- Cabecera de la Página con Colores de Alto Contraste -->
+  <section class="hero-section" aria-labelledby="barreras-hero-title">
+    <h1 id="barreras-hero-title">Barreras Educativas</h1>
+    <p class="subtitle">Identificar los obstáculos para lograr la inclusión real</p>
+    <p class="description">
+      Las barreras educativas son todos aquellos factores del entorno, la infraestructura, la metodología o la cultura escolar que dificultan o impiden el acceso, la participación y el aprendizaje de los estudiantes.
+    </p>
+
+    <!-- Conexión entre Páginas -->
+    <div class="nav-links-banner">
+      <Button text="Inicio" href="/" ariaLabel="Ir a la página de inicio" />
+      <Button text="Información" href="/info" ariaLabel="Ir a la página de información general" />
+      <Button text="Propuestas Inclusivas" href="/propuestas" ariaLabel="Ir a la página de propuestas inclusivas" />
+    </div>
+  </section>
+
+  <!-- Clasificación de Barreras en Grid Hermético -->
+  <section class="info-block" aria-labelledby="tipos-title">
+    <h2 id="tipos-title">Tipos de Barreras en el Entorno Escolar</h2>
+    <p class="block-intro">
+      Para poder eliminar las barreras, primero debemos aprender a reconocerlas en la vida cotidiana de la comunidad educativa:
+    </p>
+    <div class="grid">
+      <Card 
+        title="Barreras Físicas" 
+        description="Infraestructura inaccesible, falta de rampas, ascensores, baños adaptados, pasillos estrechos o iluminación inadecuada." 
+      />
+      <Card 
+        title="Barreras Comunicativas" 
+        description="Falta de textos en Braille, ausencia de subtítulos, falta de intérpretes de Lengua de Señas o formatos de lectura difícil." 
+      />
+      <Card 
+        title="Barreras de Aprendizaje" 
+        description="Rigidez curricular, uso de una única metodología de enseñanza y evaluaciones estandarizadas sin adaptaciones." 
+      />
+    </div>
+  </section>
+
+  <!-- Profundización en Barreras Sociales y Actitudinales -->
+  <section class="info-block" aria-labelledby="sociales-title">
+    <h2 id="sociales-title">Barreras Sociales y Actitudinales</h2>
+    <p class="block-intro">
+      A menudo son las barreras más invisibles pero las que causan un mayor impacto en la autoestima y desarrollo del estudiante:
+    </p>
+    <ul class="barriers-list">
+      <li>
+        <strong>Prejuicios y estereotipos:</strong> Creer que un estudiante con discapacidad o neurodivergencia no tiene la capacidad de aprender o participar al mismo nivel que sus compañeros.
+      </li>
+      <li>
+        <strong>Exclusión y acoso escolar:</strong> Dinámicas de aislamiento, burlas o indiferencia que impiden la integración social en los recreos y actividades grupales.
+      </li>
+      <li>
+        <strong>Falta de empatía comunitaria:</strong> Resistencia al cambio o falta de sensibilización por parte de apoderados, docentes o compañeros respecto a las necesidades individuales.
+      </li>
+    </ul>
+
+    <div class="section-link">
+      <a href="/propuestas" class="text-link">Descubre cómo resolver estas barreras en Propuestas &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Llamado a la Acción y Navegación de Cierre -->
+  <section class="final-action-box" aria-labelledby="action-title">
+    <h2 id="action-title">De la identificación a la solución</h2>
+    <p>
+      Reconocer la existencia de estas barreras es el primer paso indispensable para diseñar propuestas efectivas que las eliminen.
+    </p>
+    <div class="buttons-container">
+      <Button text="Ir al Inicio" href="/" ariaLabel="Ir a la página de inicio" />
+      <Button text="Ver Información" href="/info" ariaLabel="Ir a la página de información" />
+      <Button text="Ver Propuestas" href="/propuestas" ariaLabel="Ir a la página de propuestas inclusivas" />
+    </div>
+  </section>
+</Mainlayout>
+
+<style>
+  /* Héroe Hermético con Colores Vibrantes */
+  .hero-section {
+    background-color: #0f172a;
+    border: 3px solid #38bdf8;
+    border-radius: 12px;
+    margin-top: 32px;
+    padding: 40px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
+  }
+
+  .hero-section h1 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 42px;
+    font-weight: 800;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .description {
+    font-size: 17px;
+    color: #f1f5f9;
+    max-width: 800px;
+    margin: 0 auto 24px auto;
+    line-height: 26px;
+  }
+
+  .nav-links-banner {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  /* Bloques de Información */
+  .info-block {
+    margin-top: 36px;
+    background-color: #ffffff;
+    border: 3px solid #1e293b;
+    border-radius: 10px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .info-block h2 {
+    font-size: 24px;
+    color: #1e1b4b;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #6366f1;
+    padding-bottom: 10px;
+    font-weight: 800;
+  }
+
+  .block-intro {
+    font-size: 16px;
+    color: #0f172a;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  /* Listas estructuradas */
+  .barriers-list {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .barriers-list li {
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 14px;
+    line-height: 24px;
+    padding: 12px 16px;
+    background-color: #f8fafc;
+    border-left: 4px solid #6366f1;
+    border-radius: 4px;
+  }
+
+  .barriers-list strong {
+    color: #312e81;
+  }
+
+  .section-link {
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  .text-link {
+    color: #4338ca;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .text-link:hover, .text-link:focus {
+    color: #1e1b4b;
+    text-decoration: underline;
+  }
+
+  /* Cierre Destacado */
+  .final-action-box {
+    background-color: #1e1b4b;
+    border: 3px solid #fbbf24;
+    border-radius: 12px;
+    padding: 36px 24px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .final-action-box h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 14px;
+    font-weight: 800;
+  }
+
+  .final-action-box p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fef08a;
+    max-width: 800px;
+    margin: 0 auto 28px auto;
+    line-height: 28px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
+    .hero-section {
+      padding: 28px 16px;
+    }
+
+    .hero-section h1 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+    }
+
+    .info-block {
+      padding: 22px 16px;
+    }
+
+    .section-link {
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+PROMPT 1:
+Necesito crear un sitio web en astro que cumpla con:
+    3 páginas funcionales,
+    4 componentes, 1 layout, 
+    estilos CSS en px sin JS y diseño responsive, 
+    navegación funcional entre páginas...
+
+
+PROMPT:2
+que en el index diga bienvenidos a nuestra pagina sobre inclusion y
+accesibilidad de manera comoda y amigable, añade mas informacion.
+
+
+PROMPT 3:
+"dame info acerca de esto para la pagina info.astro:. Un colegio para todos y todas - Inclusión educativa y accesibilidad..."
+
+PROMPT:4 crea una pagina para info, barreras, propuestas acorde a la informacion que te he dado
+
+PROMPT 5: hazme esta pagina de manera mas hermetica y con colores mas llamativos e interesantes siguiendo la misma estructura del codigo:

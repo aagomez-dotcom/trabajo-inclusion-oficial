@@ -1,0 +1,33 @@
+---
+interface Props {
+  text: string;
+  href?: string;
+  ariaLabel?: string;
+}
+
+const { text, href = "#", ariaLabel } = Astro.props;
+---
+
+<a href={href} class="btn" aria-label={ariaLabel}>
+  {text}
+</a>
+
+<style>
+  .btn {
+    display: inline-block;
+    background-color: #004499;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .btn:hover,
+  .btn:focus {
+    background-color: #002255;
+    color: #ffffff;
+    outline: 3px solid #ffcc00;
+  }
+</style>
